@@ -35,12 +35,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":utils"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -75,6 +77,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.timber)
     implementation(libs.androidx.appcompat)
+    implementation(libs.accompanist.systemuicontroller)
 
     //Testing
     testImplementation(libs.junit)

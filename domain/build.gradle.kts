@@ -34,7 +34,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":utils"))
     implementation(libs.androidx.paging.common)
     implementation(libs.javax.inject)
     implementation(libs.kotlinx.serialization.json)
