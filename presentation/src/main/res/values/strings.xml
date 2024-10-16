@@ -2,12 +2,12 @@
 <resources>
     <string translatable="false"  name="news_list_screen">news_list_screen</string>
     <string name="news">News</string>
+    <string name="top_bar_title">NewsBuzz</string>
     <string name="back_icon">Back Icon</string>
     <string name="no_news_available">No news available</string>
     <string name="by">By %1$s, %2$s</string>
     <string name="la_en" translatable="false">English</string>
     <string name="error_loading_image">Error loading image</string>
-    <string name="all_news">All News</string>
     <string name="a_network_error_occurred_please_check_your_connection_and_try_again">A network error occurred, please check your connection and try again</string>
     <string name="an_unknown_error_occurred_please_try_again">An unknown error occurred, please try again</string>
     <string translatable="false"  name="loading_state_component">loading_state_component</string>

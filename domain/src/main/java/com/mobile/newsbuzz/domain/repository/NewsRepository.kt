@@ -6,7 +6,6 @@ import androidx.paging.PagingData
 
 interface NewsRepository {
     fun getNews(
-        country: String?,
-        category: String?,
+        country: String?
     ): Flow<PagingData<News>>
 }

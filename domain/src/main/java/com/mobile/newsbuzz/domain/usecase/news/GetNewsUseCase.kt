@@ -8,9 +8,7 @@ class GetNewsUseCase @Inject constructor(
 ) {
     operator fun invoke(
         country: String?,
-        category: String?
     ) = repository.getNews(
-        country = country,
-        category = category,
+        country = country
     )
 }

@@ -9,7 +9,6 @@ import com.mobile.newsbuzz.domain.model.News
 class NewsPagingSource(
     private val newsApi: NewsApi,
     private val country: String?,
-    private val category: String?,
 ) : PagingSource<Int, News>() {
     override fun getRefreshKey(state: PagingState<Int, News>): Int? = state.anchorPosition
 
@@ -19,7 +18,6 @@ class NewsPagingSource(
             val response =
                 newsApi.fetchNews(
                     country = country,
-                    category = category,
                     pageSize = params.loadSize,
                     page = nextPage
                 )

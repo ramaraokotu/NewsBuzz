@@ -9,7 +9,6 @@ interface NewsApi {
     @GET("top-headlines")
     suspend fun fetchNews(
         @Query("country") country: String?,
-        @Query("category") category: String?,
         @Query("pageSize") pageSize: Int,
         @Query("page") page: Int,
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
