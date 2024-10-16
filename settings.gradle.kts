@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "NewsBuzz"
 include(":app")
- 
+include(":data")
+include(":domain")
+include(":presentation")
+include(":utils")
