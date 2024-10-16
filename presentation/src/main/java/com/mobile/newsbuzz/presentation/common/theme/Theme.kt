@@ -49,6 +49,7 @@ private val DarkColorScheme = darkColorScheme(
     onSecondaryContainer = Color.White,
     error = ErrorColor,
     onError = OnErrorColor,
+    surfaceBright = DarkGreenGray80
 )
 
 @Suppress("DEPRECATION")

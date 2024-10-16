@@ -3,8 +3,6 @@ package com.mobile.newsbuzz.presentation.newsdetails
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -27,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.mobile.newsbuzz.presentation.R
-import com.mobile.newsbuzz.presentation.components.NewsImage
+import com.mobile.newsbuzz.presentation.components.NewsResourceHeaderImage
 import com.mobile.newsbuzz.presentation.utils.NewsUiModel
 import com.mobile.newsbuzz.presentation.utils.toHumanReadableDateTIme
 
@@ -115,13 +113,10 @@ fun NewsDetailsScreenContent(
             }
 
             item {
-                NewsImage(
-                    imageUrl = news.imageUrl,
+                NewsResourceHeaderImage(
+                    headerImageUrl = news.imageUrl,
                     contentDescription = news.title,
-                    modifier =
-                    Modifier
-                        .height(300.dp)
-                        .fillMaxWidth()
+                    modifier = modifier
                 )
             }
 

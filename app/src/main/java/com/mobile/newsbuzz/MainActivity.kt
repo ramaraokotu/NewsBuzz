@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.core.view.WindowCompat
@@ -24,14 +25,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsBuzzTheme {
                 val navController = rememberNavController()
-                Scaffold(
-                    modifier = Modifier
-                        .testTag("main_scaffold")
-                        .fillMaxSize(),
-
-                    ) {
+                Surface {
                     AppNavHost(
-                        modifier = Modifier.padding(it),
                         navController = navController
                     )
                 }
