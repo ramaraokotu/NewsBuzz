@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -33,11 +35,41 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":utils"))
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(libs.androidx.paging.common)
+    implementation(libs.javax.inject)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson.converter)
+
+    //Coroutines
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.core)
+    implementation(libs.androidx.junit.ktx)
+
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.junit)
+    testImplementation(libs.truth)
+    androidTestImplementation(libs.truth)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    androidTestImplementation(libs.coroutines.test)
+
+    // Dagger - Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    ksp(libs.androidx.hilt.compiler)
+
+    implementation(libs.timber)
+    implementation(libs.androidx.appcompat)
+
+    //Testing
+    testImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.turbine)
+
 }
