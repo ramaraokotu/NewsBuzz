@@ -11,5 +11,6 @@
     <dimen name="loading_progress_storke_width">2dp</dimen>
     <dimen name="vertical_space_arrangement">16.dp</dimen>
     <dimen name="lazy_column_horizontal">16dp</dimen>
-    <dimen name="lazy_column_vertical">8dp</dimen>"
+    <dimen name="lazy_column_vertical">8dp</dimen>
+   <dimen name="vertical_arrangement">8dp</dimen>
 </resources>

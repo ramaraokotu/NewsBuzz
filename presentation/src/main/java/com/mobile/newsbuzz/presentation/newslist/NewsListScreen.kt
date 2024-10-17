@@ -31,6 +31,10 @@ import com.mobile.newsbuzz.presentation.navigation.Destinations
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+/**
+ * NewsListScreen is the screen that displays the list of news.
+ */
+
 @Composable
 fun NewsListScreen(
     modifier: Modifier = Modifier,

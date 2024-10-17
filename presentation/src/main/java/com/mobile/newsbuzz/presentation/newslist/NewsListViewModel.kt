@@ -13,6 +13,10 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
+/**
+ * NewsListViewModel is the view model for the news list screen. it handles the ui state
+ * and get the news from the use case.
+ */
 @HiltViewModel
 class NewsListViewModel @Inject constructor(
     private val getNewsUseCase: GetNewsUseCase
