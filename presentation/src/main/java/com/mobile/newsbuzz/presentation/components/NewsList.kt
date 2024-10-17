@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
@@ -22,28 +23,33 @@ import com.mobile.newsbuzz.presentation.common.components.LoadingStateComponent
 import com.mobile.newsbuzz.presentation.utils.NewsUiModel
 import com.mobile.newsbuzz.presentation.utils.getPagingError
 
+/**
+ *  Handle the News List and display the news items in a LazyColumn
+ *  and handle the loading and error states of the LazyColumn
+ */
+
 @Composable
 fun NewsList(
-    onClickNews: (NewsUiModel) -> Unit,
     newsPaging: LazyPagingItems<NewsUiModel>,
     modifier: Modifier = Modifier,
+    onNewsClick: (url: String) -> Unit
 ) {
     val context = LocalContext.current
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(
-            horizontal = 16.dp,
-            vertical = 8.dp
+            horizontal = dimensionResource(id = R.dimen.lazy_column_horizontal),
+            vertical = dimensionResource(id = R.dimen.news_card_rounded_corner)
         ),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.vertical_space_arrangement))
     ) {
         items(newsPaging.itemCount) {
             val news = newsPaging[it]
             if (news != null) {
                 NewsItem(
                     news = news,
-                    onClick = {
-                        onClickNews(news)
+                    onNewsClick = {
+                        onNewsClick(news.url)
                     }
                 )
             }
@@ -97,9 +103,9 @@ fun NewsList(
                             CircularProgressIndicator(
                                 modifier =
                                 Modifier
-                                    .size(16.dp)
+                                    .size(dimensionResource(id = R.dimen.loading_progress_size))
                                     .align(Alignment.Center),
-                                strokeWidth = 2.dp
+                                strokeWidth = dimensionResource(id = R.dimen.loading_progress_storke_width)
                             )
                         }
                     }

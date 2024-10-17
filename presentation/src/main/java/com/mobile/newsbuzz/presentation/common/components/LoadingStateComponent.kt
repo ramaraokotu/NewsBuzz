@@ -11,6 +11,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import com.mobile.newsbuzz.presentation.R
 
+/**
+ * Loading state component.
+ */
 @Composable
 fun LoadingStateComponent(
     modifier: Modifier = Modifier,

@@ -13,6 +13,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.mobile.newsbuzz.presentation.R
 
+/**
+ * Empty state component for displaying a message when there are no news available.
+ */
 @Composable
 fun EmptyStateComponent(
     modifier: Modifier = Modifier,

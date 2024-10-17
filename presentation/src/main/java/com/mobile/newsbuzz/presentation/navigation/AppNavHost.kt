@@ -1,40 +1,44 @@
-
 package com.mobile.newsbuzz.presentation.navigation
 
+import android.content.Context
+import android.net.Uri
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.navigation.NavHostController
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.toRoute
-import com.mobile.newsbuzz.presentation.newsdetails.NewsDetailsScreen
+import androidx.navigation.compose.rememberNavController
 import com.mobile.newsbuzz.presentation.newslist.NewsListScreen
-import com.mobile.newsbuzz.presentation.utils.NewsUiModel
-import kotlin.reflect.typeOf
 
+/**
+ * AppNavHost is the navigation host for the app.
+ *  start destination is NewsListScreen. and
+ *  onNewsClick is used to open the news in custom chrome tab.
+ */
 @Composable
-fun AppNavHost(
-    navController: NavHostController,
-    modifier: Modifier = Modifier
-) {
+fun AppNavHost() {
+    val navController = rememberNavController()
+    val context = LocalContext.current
+
     NavHost(
-        modifier = modifier,
         navController = navController,
-        startDestination = Destinations.NewsList
+        startDestination = Destinations.HomeNews.name
     ) {
-        composable<Destinations.NewsList> {
+        composable(route = Destinations.HomeNews.name) {
             NewsListScreen(
-                navController = navController
-            )
-        }
-        composable<Destinations.NewsDetails>(
-            typeMap = mapOf(typeOf<NewsUiModel>() to NewsUiModelParameterType)
-        ) { backStackEntry ->
-            val news = backStackEntry.toRoute<Destinations.NewsDetails>().news
-            NewsDetailsScreen(
-                news = news,
-                navController = navController
+                onNewsClick = {
+                    openCustomChromeTab(context, it)
+                }
             )
         }
     }
+}
+
+/**
+ * openCustomChromeTab is used to open the news in custom chrome tab.
+ */
+fun openCustomChromeTab(context: Context, url: String) {
+    val builder = CustomTabsIntent.Builder()
+    val customTabsIntent = builder.build()
+    customTabsIntent.launchUrl(context, Uri.parse(url))
 }

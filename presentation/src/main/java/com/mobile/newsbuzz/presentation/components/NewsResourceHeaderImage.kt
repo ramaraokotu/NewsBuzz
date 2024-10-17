@@ -16,12 +16,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import com.mobile.newsbuzz.presentation.R
 
+/**
+ * That displays a news resource header image.
+ */
 @Composable
 fun NewsResourceHeaderImage(
     headerImageUrl: String,
@@ -41,7 +45,7 @@ fun NewsResourceHeaderImage(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(180.dp),
+            .height(dimensionResource(id = R.dimen.news_header_resource_image_height)),
         contentAlignment = Alignment.Center,
     ) {
         if (isLoading) {
@@ -49,7 +53,7 @@ fun NewsResourceHeaderImage(
             CircularProgressIndicator(
                 modifier = modifier
                     .align(Alignment.Center)
-                    .size(80.dp),
+                    .size(dimensionResource(id = R.dimen.progress_bar_image_size)),
                 color = MaterialTheme.colorScheme.tertiary,
             )
         }
@@ -57,7 +61,7 @@ fun NewsResourceHeaderImage(
         Image(
             modifier = modifier
                 .fillMaxWidth()
-                .height(180.dp),
+                .height(dimensionResource(id = R.dimen.news_header_resource_image_height)),
             contentScale = ContentScale.Crop,
             painter = if (isError.not() && !isLocalInspection) {
                 imageLoader

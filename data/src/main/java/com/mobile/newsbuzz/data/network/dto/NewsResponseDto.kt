@@ -3,6 +3,9 @@ package com.mobile.newsbuzz.data.network.dto
 import com.google.gson.annotations.SerializedName
 import com.mobile.newsbuzz.domain.model.News
 
+/**
+ * News response DTO [NewsResponseDto]
+ */
 data class NewsResponseDto(
     @SerializedName("articles")
     val articles: List<ArticleDto>,
@@ -38,6 +41,9 @@ data class NewsResponseDto(
     }
 
     companion object {
+        /**
+         * Mapping function to convert [ArticleDto] to [News]
+         */
         fun ArticleDto.toNews() =
             News(
                 author = author.orEmpty(),
@@ -50,6 +56,9 @@ data class NewsResponseDto(
                 imageUrl = urlToImage.orEmpty()
             )
 
+        /**
+         * Mapping function to convert [News] to [ArticleDto]
+         */
         fun News.toNewsDto() =
             ArticleDto(
                 author = author,

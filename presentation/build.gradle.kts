@@ -75,9 +75,9 @@ dependencies {
 
     implementation(libs.compose.navigation)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.timber)
     implementation(libs.androidx.appcompat)
     implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.androidx.browser)
 
     //Testing
     testImplementation(libs.junit)

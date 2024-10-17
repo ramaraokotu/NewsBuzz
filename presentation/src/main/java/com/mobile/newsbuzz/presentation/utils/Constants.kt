@@ -9,11 +9,9 @@ import com.mobile.newsbuzz.presentation.R
 import retrofit2.HttpException
 import java.io.IOException
 import java.io.Reader
-import java.text.SimpleDateFormat
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
-import java.util.Date
 import java.util.concurrent.TimeUnit
 
 fun errorMessage(
@@ -85,16 +83,15 @@ fun String.toRelativeTime(): String {
     }
 }
 
-/** Given 2024-07-11T02:48:00Z, return Friday, 11 July 2024, 02:48 AM */
-@SuppressLint("SimpleDateFormat")
-fun String.toHumanReadableDateTIme(): String = try {
-    val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-    val date = formatter.parse(this)
-    val humanReadableDate = SimpleDateFormat("EEEE, dd MMMM yyyy, hh:mm a").format(date as Date)
-    humanReadableDate
-} catch (e: Exception) {
-    this
+
+class Constants {
+    companion object {
+        const val COUNTRY_CODE = "us"
+        const val SCREEN_NAME = "newslist"
+    }
 }
+
+
 
 
 

@@ -13,6 +13,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.mobile.newsbuzz.presentation.R
 
+/**
+ * Composable for displaying an error state component.
+ */
 @Composable
 fun ErrorStateComponent(
     modifier: Modifier = Modifier,

@@ -11,6 +11,9 @@ import com.mobile.newsbuzz.utils.Constants.PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
+/**
+ *  [NewsRepository] implementation for fetching news from the API [NewsApi]
+ */
 
 class NewsRepositoryImpl @Inject constructor(
     private val newsApi: NewsApi

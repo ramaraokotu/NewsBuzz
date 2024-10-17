@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <dimen name="news_header_resource_image_height">180dp</dimen>
+    <dimen name="progress_bar_image_size">40dp</dimen>
+    <dimen name="news_card_rounded_corner">16dp</dimen>
+    <dimen name="news_card_elevation">2dp</dimen>
+    <dimen name="space_height">14dp</dimen>
+    <dimen name="image_bottom_space">16dp</dimen>
+    <dimen name="title_top_space">12dp</dimen>
+    <dimen name="loading_progress_size">16dp</dimen>
+    <dimen name="loading_progress_storke_width">2dp</dimen>
+    <dimen name="vertical_space_arrangement">16.dp</dimen>
+    <dimen name="lazy_column_horizontal">16dp</dimen>
+    <dimen name="lazy_column_vertical">8dp</dimen>"
+</resources>

@@ -33,22 +33,16 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun NewsListScreen(
-    navController: NavController,
     modifier: Modifier = Modifier,
-    viewModel: NewsListViewModel = hiltViewModel()
+    viewModel: NewsListViewModel = hiltViewModel(),
+    onNewsClick: (url: String) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
     NewsListScreenContent(
         modifier = modifier,
         uiState = uiState,
-        onAction = { action ->
-            when (action) {
-                is NewsListUiAction.NavigateToNewsDetails -> {
-                    navController.navigate(Destinations.NewsDetails(action.news))
-                }
-            }
-        }
+        onNewsClick = onNewsClick
     )
 }
 
@@ -56,8 +50,8 @@ fun NewsListScreen(
 @Composable
 fun NewsListScreenContent(
     uiState: NewsListUiState,
-    onAction: (NewsListUiAction) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNewsClick: (url: String) -> Unit
 ) {
     val newsPaging = uiState.news?.collectAsLazyPagingItems()
     Scaffold(
@@ -100,8 +94,8 @@ fun NewsListScreenContent(
                     modifier = Modifier
                         .fillMaxSize(),
                     newsPaging = newsPaging,
-                    onClickNews = {
-                        onAction(NewsListUiAction.NavigateToNewsDetails(it))
+                    onNewsClick = {
+                        onNewsClick(it)
                     }
                 )
             } else {

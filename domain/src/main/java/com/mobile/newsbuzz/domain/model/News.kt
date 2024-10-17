@@ -2,6 +2,9 @@ package com.mobile.newsbuzz.domain.model
 
 import kotlinx.serialization.Serializable
 
+/**
+ * Data class representing a news article.
+ */
 @Serializable
 data class News(
     val title: String,

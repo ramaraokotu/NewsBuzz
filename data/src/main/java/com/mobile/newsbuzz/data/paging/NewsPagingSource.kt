@@ -6,6 +6,9 @@ import com.mobile.newsbuzz.data.network.NewsApi
 import com.mobile.newsbuzz.data.network.dto.NewsResponseDto.Companion.toNews
 import com.mobile.newsbuzz.domain.model.News
 
+/**
+ * [PagingSource] for pagination of news
+ */
 class NewsPagingSource(
     private val newsApi: NewsApi,
     private val country: String?,

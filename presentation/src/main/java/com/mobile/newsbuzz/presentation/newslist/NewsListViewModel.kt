@@ -20,12 +20,14 @@ class NewsListViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(NewsListUiState())
     val uiState = _uiState.asStateFlow()
 
-    private fun getNews() {
+    fun getNews(
+        country: String? = null,
+    ) {
         _uiState.update {
             it.copy(
                 news =
                 getNewsUseCase(
-                    country = "us"
+                    country = country
                 ).map { pagingData ->
                     pagingData.map { news ->
                         news.toUiModel()
@@ -37,6 +39,8 @@ class NewsListViewModel @Inject constructor(
 
 
     init {
-        getNews()
+        getNews(
+            country = uiState.value.newsCountry,
+        )
     }
 }

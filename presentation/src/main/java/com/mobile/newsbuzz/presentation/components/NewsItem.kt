@@ -15,22 +15,29 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.mobile.newsbuzz.presentation.R
 import com.mobile.newsbuzz.presentation.utils.NewsUiModel
 import com.mobile.newsbuzz.presentation.utils.toRelativeTime
 
+/**
+ * NewsItem Card Component to display news item
+ */
 @Composable
 fun NewsItem(
     news: NewsUiModel,
-    onClick: () -> Unit,
+    onNewsClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Card(
         modifier = modifier,
-        onClick = onClick,
-        shape = RoundedCornerShape(16.dp),
+        onClick = onNewsClick,
+        shape = RoundedCornerShape(dimensionResource(id = R.dimen.news_card_rounded_corner)),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = dimensionResource(id = R.dimen.news_card_elevation)
+        ),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceBright,
         )
@@ -44,10 +51,10 @@ fun NewsItem(
                 )
             }
             Box(
-                modifier = Modifier.padding(16.dp),
+                modifier = Modifier.padding(dimensionResource(id = R.dimen.image_bottom_space)),
             ) {
                 Column {
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.title_top_space)))
                     Row {
                         NewsResourceTitle(
                             news.title,
@@ -55,11 +62,11 @@ fun NewsItem(
                                 .fillMaxWidth((.8f)),
                         )
                     }
-                    Spacer(modifier = Modifier.height(14.dp))
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_height)))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         NewsResourceMetaData(news.publishedAt, news.source)
                     }
-                    Spacer(modifier = Modifier.height(14.dp))
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_height)))
                     NewsResourceShortDescription(news.content)
                 }
             }
@@ -67,6 +74,9 @@ fun NewsItem(
     }
 }
 
+/**
+ * News Resource Title
+ */
 @Composable
 fun NewsResourceTitle(
     newsResourceTitle: String,
@@ -75,7 +85,9 @@ fun NewsResourceTitle(
     Text(newsResourceTitle, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
 }
 
-
+/**
+ * News Resource Meta Data
+ */
 @Composable
 fun NewsResourceMetaData(publishedAt: String, resourceType: String) {
     val formattedDate = publishedAt.toRelativeTime()
@@ -89,6 +101,9 @@ fun NewsResourceMetaData(publishedAt: String, resourceType: String) {
     )
 }
 
+/**
+ * News Resource Short Description
+ */
 @Composable
 fun NewsResourceShortDescription(
     newsResourceShortDescription: String,
