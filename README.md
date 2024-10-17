@@ -73,6 +73,15 @@ Here's a breakdown of the module dependencies:
 - [Truth](https://truth.dev/) - A library for fluent assertions in Java and Android testing.
 - [Turbine](https://github.com/cashapp/turbine) - A small testing library for Kotlin Coroutines Flow.
 
+## How to Run the Project
+
+- Clone the Repository:
+```
+git clone https://github.com/ramaraokotu/NewsBuzz
+cd NewsBuzz
+```
+- Build and run the NewsBuzz.
+
 ### Screenshots
 <p>
   <img alt="screenshot1" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/news_list_page.png?raw=true" width="300">
