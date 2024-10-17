@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string translatable="false"  name="news_list_screen">news_list_screen</string>
+    <string translatable="false"  name="news_list_screen">newslist</string>
     <string name="news">News</string>
     <string name="top_bar_title">NewsBuzz</string>
     <string name="back_icon">Back Icon</string>

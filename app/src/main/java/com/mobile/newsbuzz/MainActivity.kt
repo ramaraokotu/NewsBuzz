@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowCompat
+import androidx.navigation.compose.rememberNavController
 import com.mobile.newsbuzz.presentation.common.theme.NewsBuzzTheme
 import com.mobile.newsbuzz.presentation.navigation.AppNavHost
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,10 +22,13 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, true)
         setContent {
             NewsBuzzTheme {
-                Surface(modifier = Modifier.background(
-                    color = Color.Gray
-                )) {
-                    AppNavHost()
+                Surface(
+                    modifier = Modifier.background(
+                        color = Color.Gray
+                    )
+                ) {
+                    val navController = rememberNavController()
+                    AppNavHost(navController)
                 }
             }
         }
