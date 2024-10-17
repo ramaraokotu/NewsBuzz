@@ -82,13 +82,6 @@ dependencies {
     kspAndroidTest(libs.hilt.android.compiler)
     androidTestImplementation(libs.hilt.android.testing)
 
-    // Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson.converter)
-    implementation(platform(libs.okhttp.bom))
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging.interceptor)
-
     implementation(libs.compose.navigation)
     androidTestImplementation(libs.navigation.testing)
     implementation(libs.kotlinx.serialization.json)
