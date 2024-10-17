@@ -1,10 +1,21 @@
 # NewsBuzz App 📱
 The NewsBuzz app is designed using Jetpack Compose and adheres to Clean Architecture principles, specifically the MVVM pattern. It leverages Paging 3 for efficient data loading, Retrofit for seamless network operations, and Dagger Hilt for dependency injection, ensuring optimal performance and a modern development experience. The app's modular structure enhances maintainability and scalability.
 
-### Features
+## Features Implemented
+
 - Display news in a list
 - Display news details in webview
-  
+
+  ## Major Highlights
+- **Jetpack Compose** for modern UI
+- **MVVM architecture combined with Clean Architecture with modular structure** ensures a maintainability and scalability codebase.
+- **Kotlin**
+- **Dagger Hilt** for efficient dependency injection.
+- **Retrofit** for seamless networking
+- **Coroutines** for asynchronous programming
+- **Unit tests** for robust code coverage
+- **Navigation** for smooth transitions between screens
+
 ### Project Structure
 
 #### Data Layer
@@ -61,4 +72,29 @@ Here's a breakdown of the module dependencies:
 - [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization) - Kotlin multiplatform / multi-format serialization
 - [Truth](https://truth.dev/) - Fluent assertions for Java and Android
 - [Turbine](https://github.com/cashapp/turbine) - A small testing library for kotlinx.coroutines Flow
+
+### Screenshots
+<p>
+  <img alt="screenshot1" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/news_list_page.png?raw=true" width="300">
+  <img alt="screenshot2" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/web_view_page.png?raw=true" width="300">
+</p>
+
+---
+## License
+
+```
+Copyright 2024 Ramarao Kotu
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
 
