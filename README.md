@@ -30,24 +30,6 @@ Contains business logic, including repositories, models, and use cases. Tests fo
 
 Includes screens and their ViewModels, following the MVVM pattern. Uses separate data models for the presentation layer, distinct from domain models.
 
-### Module Graph
-
-```mermaid
-%%{
-  init: {
-    'theme': 'neutral'
-  }
-}%%
-
-graph LR
-  :presentation --> :data
-  :presentation --> :domain
-  :app --> :data
-  :app --> :domain
-  :app --> :presentation
-  :data --> :domain
-```
-
 Here's a breakdown of the module dependencies:
 - `app` depends on `data`, `domain`, `presentation`.
 - `presentation` depends on `domain`,`data`.
