@@ -6,7 +6,8 @@ The NewsBuzz app is designed using Jetpack Compose and adheres to Clean Architec
 - Display news in a list
 - Display news details in webview
 
-  ## Major Highlights
+## Major Highlights
+
 - **Jetpack Compose:** Utilizes modern UI design.
 - **MVVM & Clean Architecture:** Ensures maintainable and scalable code with a modular structure.
 - **Kotlin:** Programming language used.
