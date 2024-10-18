@@ -1,11 +1,6 @@
 # NewsBuzz App 📱
 The NewsBuzz app is designed using Jetpack Compose and adheres to Clean Architecture principles, specifically the MVVM pattern. It leverages Paging for efficient data loading, Retrofit for seamless network operations, and Dagger Hilt for dependency injection, ensuring optimal performance and a modern development experience. The app's modular structure enhances maintainability and scalability.
 
-## Features Implemented
-
-- Display news in a list
-- Display news details in webview
-
 ## Major Highlights
 
 - **Jetpack Compose:** Utilizes modern UI design.
@@ -16,6 +11,11 @@ The NewsBuzz app is designed using Jetpack Compose and adheres to Clean Architec
 - **Coroutines:** Enables asynchronous programming.
 - **Unit Tests:** Ensures robust code coverage.
 - **Navigation:** Allows smooth transitions between screens.
+
+## Features Implemented
+
+- Display news in a list
+- Display news details in webview
 
 ### Project Structure
 
@@ -43,7 +43,7 @@ Here's a breakdown of the module dependencies:
 - I wrote tests for the UI in the presentation layer.
 - I wrote some tests for navigation.
 
-### Libraries
+### Dependency Use
 - [Jetpack Compose](https://developer.android.com/jetpack/compose) - A modern toolkit for building native user interfaces.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) -  A dependency injection library that simplifies the process of manual dependency injection.
