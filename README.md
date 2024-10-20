@@ -38,11 +38,11 @@ Here's a breakdown of the module dependencies:
 - `data` depends on `domain`.
 
 ### Testing
-- I wrote tests for the `PagingSource` in the data layer.
-- I wrote tests for the `usecases` in the domain layer.
-- I wrote tests for the `viewmodels` in the presentation layer.
-- I wrote tests for the UI in the presentation layer.
-- I wrote some tests for navigation.
+- Tested the PagingSource in the data layer.
+- Validated the use cases in the domain layer.
+- Conducted tests on the view models in the presentation layer.
+- Performed UI tests in the presentation layer.
+- Implemented tests for navigation.
 
 ### Dependency Use
 - [Jetpack Compose](https://developer.android.com/jetpack/compose) - A modern toolkit for building native user interfaces.
