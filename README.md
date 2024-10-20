@@ -1,14 +1,14 @@
 # NewsBuzz App 📱
-The NewsBuzz app is designed using Jetpack Compose and adheres to Clean Architecture principles, specifically the MVVM pattern. It leverages Paging for efficient data loading, Retrofit for seamless network operations, and Dagger Hilt for dependency injection, ensuring optimal performance and a modern development experience. The app's modular structure enhances maintainability and scalability.
+The NewsBuzz app is a modern Android application built with a focus on maintainability, testability, scalability, simplicity, and performance. By leveraging Clean Architecture and MVVM principles, the project ensures a well-structured and modular codebase that enhances code reusability and separation of concerns.
 
-## Major Highlights
+## Key Features
 
-- **Jetpack Compose:** Utilizes modern UI design.
-- **MVVM & Clean Architecture:** Ensures maintainable and scalable code with a modular structure.
+- **Multi-Module Architecture:** Designed with a modular project structure for better separation of responsibilities, improved build times, and scalability.
+- **Jetpack Compose:** Utilizes the latest declarative UI toolkit for Android to build responsive, beautiful, and fast UIs.
 - **Kotlin:** Programming language used.
-- **Dagger Hilt:** Provides efficient dependency injection.
-- **Retrofit:** Facilitates seamless network operations.
-- **Coroutines:** Enables asynchronous programming.
+- **Paging3:** Seamless data loading with efficient pagination for better performance in handling large datasets.
+- **Retrofit & Dagger Hilt:** Retrofit for networking and Dagger Hilt for dependency injection, ensuring a clean, testable, and maintainable codebase.
+- **Coroutines:** Asynchronous operations powered by Kotlin Coroutines, promoting simplicity and optimal performance.
 - **Unit Tests:** Ensures robust code coverage.
 - **Navigation:** Allows smooth transitions between screens.
 
