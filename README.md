@@ -20,15 +20,15 @@ The NewsBuzz app is a modern Android application built with a focus on maintaina
 
 ### Project Structure
 
-#### Data Layer
+#### [`Data Module `](/data)
 
 Manages application data, including remote sources, and relies on the domain layer for contracts. Tests for the PagingSource are implemented here.
 
-#### Domain Layer
+#### [`Domain Module `](/domain)
 
 Contains business logic, including repositories, models, and use cases. Tests for use cases are conducted in this layer.
 
-#### Presentation Layer
+#### [`Presentation Module `](/presentation)
 
 Includes screens and their ViewModels, following the MVVM pattern. Uses separate data models for the presentation layer, distinct from domain models.
 
