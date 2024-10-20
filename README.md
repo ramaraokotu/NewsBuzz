@@ -14,8 +14,9 @@ The NewsBuzz app is a modern Android application built with a focus on maintaina
 
 ## Features Implemented
 
-- Display news in a list
-- Display news details in webview
+- Display news articles in a list format.
+- View detailed news articles in a WebView.
+- Handle various states including network errors, no data available, and unknown errors.
 
 ### Project Structure
 
