@@ -13,4 +13,5 @@
     <dimen name="lazy_column_horizontal">16dp</dimen>
     <dimen name="lazy_column_vertical">8dp</dimen>
    <dimen name="vertical_arrangement">8dp</dimen>
+   <dimen name="toolbar_title_text_size">20dp</dimen>
 </resources>

@@ -81,7 +81,9 @@ fun NewsResourceTitle(
     newsResourceTitle: String,
     modifier: Modifier = Modifier,
 ) {
-    Text(newsResourceTitle, style = MaterialTheme.typography.headlineSmall, modifier = modifier)
+    Text(text = newsResourceTitle,
+        style = MaterialTheme.typography.headlineSmall,
+        modifier = modifier)
 }
 
 /**
@@ -107,5 +109,6 @@ fun NewsResourceMetaData(publishedAt: String, resourceType: String) {
 fun NewsResourceShortDescription(
     newsResourceShortDescription: String,
 ) {
-    Text(newsResourceShortDescription, style = MaterialTheme.typography.bodyLarge)
+    Text(text = newsResourceShortDescription,
+        style = MaterialTheme.typography.bodyLarge)
 }
