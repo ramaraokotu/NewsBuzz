@@ -67,9 +67,11 @@ cd NewsBuzz
 
 ### Screenshots
 <p>
-  <img alt="screenshot1" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/news_list_page.png?raw=true" width="300">
-  <img alt="screenshot2" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/web_view_page.png?raw=true" width="300">
-</p>
+  <img alt="screenshot1" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/news_list_screen.png?raw=true" width="300"> 
+  <img alt="screenshot2" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/news_item_webview.png?raw=true" width="300"><br>
+  <img alt="screenshot3" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/no_network.png?raw=true" width="300">
+  <img alt="screenshot4" src="https://github.com/ramaraokotu/NewsBuzz/blob/main/no_news.png?raw=true" width="300">
+</p> 
 
 ---
 ## License
